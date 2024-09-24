@@ -1,0 +1,102 @@
+.hidden-filter {
+    top: -200px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    position: sticky;
+    z-index: 5;
+    display: none;
+    opacity: 0;
+    transition: all 0.8s linear;
+    box-shadow: 0 3px 1px -4px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.hidden-filter.visible {
+    display: block;
+    opacity: 1;
+    top: 0;
+}
+
+.filter-body {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    gap: 20px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.filters {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.mf-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.mf-title {
+    background: #f2f2f2;
+    padding: 5px 12px 0 6px;
+    display: flex;
+    align-items: center;
+}
+
+.mf-title-nations {
+    flex: 1;
+}
+
+.mf-nations {
+    display: flex;
+    column-gap: 5px;
+    align-items: center;
+}
+
+.mf-nation-flag {
+    width: 14px;
+    height: 14px;
+    display: flex;
+    margin-top: -4px;
+}
+
+.mf-nation-flag img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.mf-nation {
+    margin: 0;
+    font-family: Delivery-bold;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.mf-vs {
+    font-size: 14px;
+    margin-top: -4px;
+}
+
+.mf-title-link a {
+    color: var(--primary-color);
+    font-size: 14px;
+    margin: 5px;
+}
+
+.mf-months-tab .uk-tab {
+    margin-bottom: 0;
+}
+
+.mf-months-tab .uk-tab li a {
+    font-family: Delivery-bold;
+    font-size: 14px;
+    padding: 10px 0;
+    text-transform: capitalize;
+}
+
+.mf-months-tab .uk-tab li.uk-active a {
+    border-bottom: 2px solid var(--primary-color);
+}

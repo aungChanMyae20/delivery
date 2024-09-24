@@ -1,0 +1,30 @@
+
+@font-face {
+  font-family: Delivery;
+  src: url(/public/fonts/Delivery_W_Rg.woff2);
+}
+
+@font-face {
+  font-family: Delivery-bold;
+  src: url(/public/fonts/Delivery-Bold.woff2);
+}
+
+@font-face {
+  font-family: Delivery-cl;
+  src: url(/public/fonts/Delivery_W_CdLt.woff2);
+}
+
+@font-face {
+  font-family: Delivery-cb;
+  src: url(/public/fonts/Delivery_W_CdBlk.woff2);
+}
+
+body {
+  margin: 0;
+  color: #000;
+  font-family: Delivery, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

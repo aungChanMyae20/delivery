@@ -1,0 +1,29 @@
+:root {
+    --primary-color: #d40511;
+    --secondary-color: #fc0;
+    --background-gradiant: linear-gradient(90deg,#fc0 0,#fc0 32%,#ffe57f 64%,#fff0b2);
+}
+
+.uk-button {
+    border-radius: 4px;
+    text-transform: capitalize;
+    font-family: Delivery-bold;
+}
+
+.uk-button.uk-button-primary,
+.uk-button.uk-button-primary:hover {
+  background-color: var(--primary-color);
+}
+
+.uk-button.uk-button-default {
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.uk-select {
+    border-radius: 4px;
+}
+
+.uk-select option:disabled {
+    opacity: 0.5;
+}

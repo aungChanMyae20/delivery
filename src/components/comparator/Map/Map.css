@@ -1,0 +1,142 @@
+.map {
+    max-width: 674px;
+    min-height: 400px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 80px;
+    position: relative;
+    z-index: 4;
+}
+
+.country {
+    position: absolute;
+    cursor: pointer;
+}
+
+.country.disabled {
+    cursor: default;
+}
+
+.country .map-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.country .map-img:not(.selected) img:first-child,
+.country .map-img.selected img:last-child {
+    display: block;
+}
+
+.country .map-img.selected img:first-child,
+.country .map-img:not(.selected) img:last-child {
+    display: none;
+}
+
+.country .map-flag {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 5;
+    transform: translate(-50%, -50%);
+    width: 44px;
+    height: 44px;
+    transition: opacity 0.3s linear;
+}
+
+.country.disabled .map-flag {
+    opacity: 0.6;
+}
+
+.country.uk {
+    /* width: 115px; */
+    width: 17%;
+    top: 0;
+    left: 15%;
+}
+
+.country.de {
+    /* width: 92px; */
+    width: 13.7%;
+    top: 0;
+    left: 33.3%;
+    z-index: 3;
+}
+
+.country.cn {
+    /* width: 310px; */
+    width: 46%;
+    top: 5%;
+    right: 15%;
+    z-index: 2;
+}
+
+.country.cn .map-flag {
+    top: 41%;
+    left: 57%;
+}
+
+.country.kr {
+    /* width: 53px; */
+    width: 8%;
+    top: 39%;
+    right: 10.4%;
+    z-index: 3;
+}
+
+.country.jp {
+    /* width: 119px; */
+    width: 17.8%;
+    bottom: 12%;
+    right: 0;
+    z-index: 2;
+}
+
+.country.jp .map-flag {
+    top: 64%;
+    left: 66%;
+}
+
+.country.us {
+    /* width: 293px; */
+    width: 43.4%;
+    bottom: 11%;
+    left: 0;
+}
+
+.country.us .map-flag {
+    top: 40%;
+    left: 43%;
+}
+
+.country.in {
+    /* width: 154px; */
+    width: 22.8%;
+    left: 38.5%;
+    bottom: 0;
+    z-index: 3;
+}
+
+.country.in .map-flag {
+    top: 47%;
+    left: 38%;
+}
+
+.compare-range {
+    display: flex;
+    justify-content: center;
+    margin: 15px auto 0 auto;
+}
+
+@media (max-width: 600px) {
+    .map {
+        max-width: 399px;
+        min-height: 228px;
+        margin-top: 20px;
+    }
+
+    .country .map-flag {
+        width: 24px;
+        height: 24px;
+    }
+}

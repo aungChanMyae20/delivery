@@ -1,0 +1,154 @@
+.sidebar {
+    background-color: #666;
+    min-height: 100vh;
+    transition: width 0.3s ease;
+    position: relative;
+}
+.sidebar.collapsed {
+    width: 56px;
+}
+
+.sidebar:not(.collapsed) {
+    width: 250px !important;
+}
+
+.uk-button-primary.toggle-btn {
+    margin-bottom: 10px;
+    outline: none;
+    border: 0;
+    border-radius: 0;
+    padding: 8px 16px;
+    width: 100%;
+    height: 60px;
+    margin: 0;
+}
+
+.sidebar:not(.collapsed) .uk-button-primary.toggle-btn {
+    background-color: #666;
+    text-align: left;
+}
+
+.uk-nav-default.left-nav ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-item:hover {
+    background-color: #fff;
+    transition: background-color 0.4s linear;
+}
+
+.menu-item .menu-icon img {
+    width: 24px;
+}
+
+.menu-item .menu-icon + p {
+    margin: 0;
+    text-transform: capitalize;
+    color: #fff;
+    font-family: Delivery-bold;
+    font-size: 16px;
+    height: 1.25rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    animation: words-appear 0.5s linear 1;
+}
+
+.menu-item:hover .menu-icon + p {
+    color: var(--primary-color);
+}
+
+@keyframes words-appear {
+    0% {
+        opacity: 0;
+        max-width: 0;
+    }
+    100% {
+        opacity: 1;
+        max-width: 230px;
+    }
+}
+
+.uk-nav li.menu-item a {
+    width: 100%;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+}
+
+.menu-item:not(.collapsed) .menu-icon .icon,
+.menu-item:not(.collapsed) .menu-icon .icon.except + .variant
+{
+    display: none;
+}
+
+.menu-item:not(.collapsed) .menu-icon .icon.except {
+    display: block;
+}
+
+.menu-item.collapsed .menu-icon .variant {
+    display: none;
+}
+
+.menu-item.collapsed:hover .menu-icon .icon,
+.menu-item:hover .menu-icon .icon.except {
+    display: none;
+}
+
+.menu-item.collapsed:hover .menu-icon .variant,
+.menu-item:hover .menu-icon .icon.except + .variant {
+    display: block;
+}
+
+.menu-item.active,
+.menu-item.active p {
+    background: #fff;
+    color: var(--primary-color);
+}
+
+.menu-item.active .menu-icon .icon {
+    display: none !important;
+}
+
+.menu-item.active .menu-icon .variant {
+    display: block !important;
+}
+
+.mobile-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    max-width: 0%;
+    background: #666;
+    transition: all 0.1s linear;
+    transition-delay: 0;
+    z-index: 1000;
+}
+
+.mobile-nave .menu-item .menu-icon + p {
+    animation: none;
+}
+
+.mobile-nav.visible {
+    right: 0;
+    max-width: 100%;
+}
+
+.mobile-nav .close-btn {
+    background: #333;
+    padding: 20px 0;
+}
+
+.mobile-nav.visible .close-btn {
+    padding: 20px;
+}
+
+.mobile-nav .close-btn button {
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+}

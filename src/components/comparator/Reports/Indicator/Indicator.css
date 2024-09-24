@@ -1,0 +1,110 @@
+.indicator-box {
+    margin: 20px auto;
+    position: relative;
+}
+
+.indicator-canvas {
+    border-radius: 20px;
+    background: #ebebeb;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+}
+
+.indicator-box::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 47px;
+    width: 1px;
+    background: rgba(110, 110, 110, 0.4);
+    z-index: 4;
+}
+
+.indicator-text {
+    position: relative;
+    padding: 0 5px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    align-items: center;
+    z-index: 2;
+}
+
+.expension {
+    font-family: Delivery-bold;
+}
+
+.sub-name {
+    font-size: 14px;
+}
+
+.backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+}
+
+.shadow, .backdrop-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: #ccc;
+}
+
+.backdrop-content {
+    z-index: 1;
+    background: var(--secondary-color);
+}
+
+.backdrop .left {
+    left: 0;
+}
+
+.backdrop .right {
+    right: 0;
+}
+
+.equal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+}
+
+.equal div {
+    position: relative;
+    width: 50%;
+    background: #b6b6b6;
+}
+
+.equal-left {
+    left: 0;
+}
+
+.equal-right {
+    right: 0;
+}
+
+@media (max-width: 959px) {
+    .indicator-canvas {
+        min-width: auto;
+        max-width: 300px;
+        margin: auto;
+        width: 100%;
+    }
+}
+
+@media (max-width: 639px) {
+    .indicator-canvas {
+        min-width: 100%;
+    }
+}

@@ -1,0 +1,15 @@
+.page {
+    position: relative;
+}
+
+.comparator-content {
+    background-image: url(/public/images/lines.png);
+    background-size: 100%;
+    background-position-y: 40px;
+    background-repeat: no-repeat;
+}
+
+.uk-button-primary {
+    position: relative;
+    z-index: 4;
+}

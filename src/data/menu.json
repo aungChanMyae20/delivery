@@ -1,0 +1,79 @@
+[
+    {
+        "text": "home",
+        "icon": "home.webp",
+        "variant": "home-h.webp",
+        "link": "/",
+        "key": "home"
+    },
+    {
+        "text": "comparator",
+        "icon": "compare.webp",
+        "variant": "compare-h.webp",
+        "link": "/comparator",
+        "key": "comparator"
+    },
+    {
+        "text": "global",
+        "icon": "globe.webp",
+        "variant": "globe-h.webp",
+        "link": "/globe",
+        "key": "global"
+    },
+    {
+        "text": "china",
+        "icon": "CN.webp",
+        "variant": "CN@2x.webp",
+        "link": "/china",
+        "key": "china"
+    },
+    {
+        "text": "germany",
+        "icon": "DE.webp",
+        "variant": "DE@2x.webp",
+        "link": "/germany",
+        "key": "germany"
+    },
+    {
+        "text": "india",
+        "icon": "IN.webp",
+        "variant": "IN@2x.webp",
+        "link": "/india",
+        "key": "india"
+    },
+    {
+        "text": "japan",
+        "icon": "JP.webp",
+        "variant": "JP@2x.webp",
+        "link": "/japan",
+        "key": "japan"
+    },
+    {
+        "text": "south korea",
+        "icon": "KR.webp",
+        "variant": "KR@2x.webp",
+        "link": "/south-korea",
+        "key": "south-korea"
+    },
+    {
+        "text": "united kingdom",
+        "icon": "UK.webp",
+        "variant": "UK@2x.webp",
+        "link": "/united-kingdom",
+        "key": "united-kingdom"
+    },
+    {
+        "text": "united states",
+        "icon": "US.webp",
+        "variant": "US@2x.webp",
+        "link": "/united-states",
+        "key": "united-states"
+    },
+    {
+        "text": "about GTB",
+        "icon": "info.webp",
+        "variant": "info-h.webp",
+        "link": "/about-gtb",
+        "key": "about-gtb"
+    }
+]

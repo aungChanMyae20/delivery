@@ -1,0 +1,34 @@
+.options {
+    padding: 16px 24px;
+    background-color: #ccc;
+    max-width: 679px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.range-select {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+}
+
+.uk-form-controls.period-select {
+    flex: 1;
+}
+
+.range-select .uk-form-label {
+    font-size: 16px;
+}
+
+@media (max-width: 430px) {
+    .range-select {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .uk-form-controls.period-select {
+        width: 100%;
+    }
+    .range-select .uk-button {
+        width: 100%;
+    }
+}

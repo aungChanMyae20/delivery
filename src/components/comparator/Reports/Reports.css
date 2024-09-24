@@ -1,0 +1,161 @@
+/* report part */
+.report {
+    overflow-y: hidden;
+}
+
+.filter-item {
+    padding-top: 147px;
+    position: relative;
+}
+
+.filter-item .uk-button {
+    min-width: 128px;
+}
+
+.filter-item span {
+    position: absolute;
+    top: -36px;
+    z-index: 2;
+}
+
+.filter-item:first-child span {
+    left: 50%;
+}
+
+.filter-item:first-child span, 
+.filter-item:last-child span {
+    width: 202px;
+}
+
+.filter-item:last-child span {
+    right: 50%;
+}
+
+.filter-item:nth-child(2) span{
+    width: 1px;
+    left: 50%;
+    top: -40px;
+}
+
+.filter-item:nth-child(2) button {
+    margin: 0 78px;
+}
+
+/* reports part */
+
+.selected-country {
+    width: 224px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.selected-country-img {
+    position: relative;
+    flex-grow: 1;
+    height: 220px;
+}
+
+.selected-country-img > img {
+    height: 100%;
+    object-fit: contain;
+}
+
+.selected-country-img span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+}
+
+.country-name p {
+    margin: 0;
+    font-family: Delivery-cb;
+    line-height: 1.5;
+    font-size: 32px;
+}
+
+.report-btn {
+    margin-top: 54px;
+}
+
+.category-body {
+    margin: 45px 0 0;
+}
+
+.category-name {
+    font-size: 18px;
+    font-family: Delivery-bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.versus {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.vs-time, .vs-text {
+    margin-top: 30px;
+    font-family: Delivery-bold;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.vs-text {
+    margin: 0;
+    font-size: 16px;
+}
+
+.vs-countries {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.nation {
+    width: 80px;
+    height: 80px;
+}
+
+.nation img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.mobile-btns {
+    margin: 40px auto;
+}
+
+.mobile-btns hr {
+    margin-bottom: 40px;
+}
+
+.country-report-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.country-report-btn {
+    width: 260px;
+}
+
+.country-report-btn .uk-button {
+    width: 100%;
+}
+
+@media (max-width: 959px) {
+    .category-body {
+        margin: 10px 10px 0;
+    }
+}
