@@ -1,6 +1,9 @@
+import { useState } from 'react';
 import './Header.css';
 
 const Header = ({ showMobileNav }) => {
+  const [socialVisible, setSocialVisible] = useState(false);
+
   return (
     <header className="uk-navbar-container uk-navbar navbar" uk-navbar="true" uk-sticky="position: top">
       <div className="uk-navbar-left navbar-left">
@@ -16,7 +19,17 @@ const Header = ({ showMobileNav }) => {
         <h1 className="company-name">Global Trade Barometer</h1>
       </div>
       <div className="uk-navbar-right navbar-right uk-visible@m">
-        <a href="#" className="uk-icon-link social-links" uk-icon="icon: social; ratio: 1"></a>
+        <div className={`social-links ${socialVisible ? 'visible': ''}`}>
+          <div className="social-links-box">
+            <a href="#" className="uk-link-icon" uk-icon="icon: facebook; ratio: 1.3" />
+            <a href="#" className="uk-link-icon" uk-icon="icon: x; ratio: 1.3" />
+            <a href="#" className="uk-link-icon" uk-icon="icon: linkedin; ratio: 1.3" />
+          </div>
+        </div>
+        <button
+          className="uk-button uk-button-link social-link" uk-icon="icon: social; ratio: 1" 
+          onClick={() => setSocialVisible(!socialVisible)}
+        />
       </div>
     </header>
   );

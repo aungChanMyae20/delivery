@@ -35,6 +35,7 @@ const Map = ({ countries, setCountries }) => {
                             className={`country ${country.code.toLowerCase()} ${(!selectedMap.includes(country.code) && selectedMap.length === 2) ? 'disabled' : ''}`} 
                             onClick={() => handleClick(country.code)}
                             uk-scrollspy={`cls:${animation}`}
+                            uk-tooltip={`title:${country.name}; pos: top`}
                         >
                             <div className={`map-img ${(countries.includes(country.code) || selectedMap.includes(country.code)) ? 'selected' : ''}`}>
                                 <img src={`/images/${country.code}-map.webp`} alt={`${country.code}-map`} />

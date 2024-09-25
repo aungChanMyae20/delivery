@@ -40,6 +40,7 @@ const MenuItem = ({collapsed, item, toggleMenu}) => {
 
 const Sidebar = ({ mobileVisible, toggleMobileNav }) => {
     const [isCollapsed, setIsCollapsed] = useState(true);
+    const [socialVisible, setSocialVisible] = useState(false);
 
     return (
         <>
@@ -73,6 +74,27 @@ const Sidebar = ({ mobileVisible, toggleMobileNav }) => {
                         menulist.map((item) => <MenuItem toggleMenu={toggleMobileNav} key={item.key} collapsed={false} item={item} />)
                     }
                 </ul>
+                <div className="mobile-nav-links">
+                    <div className="mobile-nav-links-box">
+                        <div className="reference">
+                            Visit <a href="https://lot.dhl.com/" target="_blank">logisticsofthings.dhl</a>
+                        </div>
+                        <div className="mobile-nav-socials">
+                            <div className={`social-links ${socialVisible ? 'visible': ''}`}>
+                                <div className="social-links-box">
+                                    <a href="#" className="uk-link-icon" uk-icon="icon: facebook; ratio: 1.3" />
+                                    <a href="#" className="uk-link-icon" uk-icon="icon: x; ratio: 1.3" />
+                                    <a href="#" className="uk-link-icon" uk-icon="icon: linkedin; ratio: 1.3" />
+                                </div>
+                            </div>
+                            <button 
+                                className="uk-button uk-button-link nav-social-link" 
+                                uk-icon="icon: social; ratio: 1"
+                                onClick={() => setSocialVisible(!socialVisible)}
+                            />
+                        </div>
+                    </div>
+                </div>
             </nav>
         </>
     )

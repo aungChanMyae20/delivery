@@ -27,3 +27,47 @@
 .uk-select option:disabled {
     opacity: 0.5;
 }
+
+.social-links {
+    background: #fff;
+    position: absolute;
+    right: 100%;
+    top: 30%;
+    display: none;
+    box-shadow: 0 3px 1px -4px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.social-links.visible {
+    display: block;
+}
+
+.social-links-box {
+    padding: 10px;
+    display: flex;
+    gap: 5px;
+    position: relative;
+}
+
+.social-links-box::after {
+    content: '';
+    position: absolute;
+    right: -8px;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 10px solid #fff;
+}
+
+.social-links-box a {
+    width: 26px;
+    cursor: pointer;
+    padding: 5px;
+    background: #000;
+    border-radius: 50%;
+    color: #fff;
+}
+
+.social-links-box a:hover {
+    color: var(--secondary-color);
+}

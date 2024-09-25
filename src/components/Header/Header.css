@@ -27,7 +27,8 @@
     color: var(--primary-color);
 }
 
-.uk-icon-link.social-links {
+.uk-button-link.social-link,
+.uk-button-link.social-link:hover {
     color: var(--primary-color);
     padding: 0 25px;
 }
@@ -35,6 +36,10 @@
 .uk-button.mobile-toggle-btn {
     padding: 0 8px;
     line-height: 30px;
+}
+
+.navbar-right {
+    position: relative;
 }
 
 @media (max-width: 960px) {
