@@ -45,7 +45,7 @@ const Reports = ({ countries, reports, monthIndex, onMonthChange }) => {
                                 <img src={`/images/curve-${position}.webp`} alt="curve" />
                             </span>
                             <button 
-                                className={`uk-button uk-button-${index === monthIndex ? 'primary' : 'default'}`} 
+                                className={`uk-button uk-button-${index === +monthIndex ? 'primary' : 'default'}`} 
                                 onClick={() => onMonthChange(index)}
                             >
                                 {month}

@@ -54,7 +54,6 @@ const Comparator = () => {
                 countries={countries}
                 setCountries={setCountries}
                 range={range}
-                setRange={setRange}
                 onCompare={viewData}
                 monthIndex={monthIndex}
                 onMonthChange={handleMonthFilter}

@@ -8,7 +8,6 @@ const HiddenFilter = ({
     countries: defaultCountries, 
     setCountries: setDefaultCountries,
     range: defaultRange, 
-    setRange: setDefaultRange,
     onCompare,
     monthIndex,
     onMonthChange
@@ -23,7 +22,7 @@ const HiddenFilter = ({
             const mEnd = m.split('-')[1];
             const temp = [];
             for (let i = +mStart; i <= +mEnd; i++) {
-                temp.push(allMonths[i-1].slice(0, 3));
+                temp.push(allMonths[i-1]);
             }
             setMonths(temp);
         }
@@ -35,11 +34,6 @@ const HiddenFilter = ({
         setCountries(temp);
         setDefaultCountries(temp);
         countries.length === 2 && defaultRange !== '' && onCompare();
-    }
-
-    const handleRange = (value) => {
-        setDefaultRange(value);
-        countries.length === 2 && onCompare();
     }
 
     const handleTab = (e, mIndex) => {
@@ -86,10 +80,10 @@ const HiddenFilter = ({
                         </select>
                     </div>
                     <div className="range-selector uk-form-controls ">
-                        <select className="uk-select" value={defaultRange} onChange={e => handleRange(e.currentTarget.value)}>
+                        <select className="uk-select" value={monthIndex} onChange={e => onMonthChange(e.currentTarget.value)}>
                             {
-                                periods?.map(item => {
-                                    return <option key={item.name} value={item.value}>{item.name}</option>
+                                months?.map((month, index) => {
+                                    return <option key={`${index+1}-${month}`} value={index}>{month}</option>
                                 })
                             }
                         </select>
@@ -124,9 +118,9 @@ const HiddenFilter = ({
                                 months.map((month, index) => {
                                     return <li 
                                             key={`${month}-${index+1}`}
-                                            className={`${index===monthIndex ? 'uk-active' : ''}`}
+                                            className={`${index === +monthIndex ? 'uk-active' : ''}`}
                                         >
-                                            <a href="#" onClick={e => handleTab(e, index)}>{month}</a>
+                                            <a href="#" onClick={e => handleTab(e, index)}>{month.slice(0, 3)}</a>
                                         </li>
                                 })
                             }
